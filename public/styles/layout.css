@@ -6,7 +6,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
+  
 i {
   margin-right: 10px;
 }
@@ -164,8 +164,7 @@ i {
   }
 }
 
-footer {
-  position: relative;
+.bottom-container {
   width: 100%;
   background: #3586ff;
   min-height: 100px;
@@ -177,8 +176,8 @@ footer {
   color: white;
 }
 
-footer .social_icon,
-footer .menu {
+.bottom-container .social_icon,
+.bottom-container .menu {
   position: relative;
   display: flex;
   justify-content: center;
@@ -186,23 +185,23 @@ footer .menu {
   margin: 10px 0;
 }
 
-footer .social_icon li,
-footer .menu li {
+.bottom-container .social_icon li,
+.bottom-container .menu li {
   list-style: none;
 }
-footer .social_icon li a {
+.bottom-container .social_icon li a {
   font-size: 2em;
   color: #ccc;
   margin: 0 10px;
   display: inline-block;
   transition: 0.5s;
 }
-footer .social_icon li a:hover {
+.bottom-container .social_icon li a:hover {
   transform: translateY(-15px);
   color: blue;
 }
 
-footer .menu li a {
+.bottom-container .menu li a {
   font-size: 1.2em;
   color: #ccc;
   margin: 0 10px;
@@ -211,10 +210,19 @@ footer .menu li a {
   text-decoration: none;
   opacity: 0.75;
 }
-footer .menu li a:hover {
+
+.bottom-container .menu li a:hover {
   opacity: 1;
   color: #fff;
 }
+
+.main-container {
+  min-height: 60vh;
+  margin: 50px 150px;
+  justify-content: center;
+  text-align: center;
+}
+
 p {
   color: whtie;
   text-align: center;

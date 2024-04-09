@@ -12,9 +12,17 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
+app.get("/newPost", (req, res) => {
+    res.render("post.ejs");
+});
+
+app.get("/about", (req, res) => {
+    res.render("about.ejs");
+});
+
 app.post("/submit", (req, res) => {
-  const numLetters = req.body["fName"].length + req.body["lName"].length;
-  res.render("solution.ejs", { numberOfLetters: numLetters });
+  const postContent = req.body["post"];
+  res.render("index.ejs", { newPostContent: postContent });
 });
 
 app.listen(port, () => {
