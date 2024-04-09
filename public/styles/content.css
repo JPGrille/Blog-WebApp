@@ -117,3 +117,21 @@ textarea {
 [type="submit"]:hover {
   background: #3586ff;
 }
+
+@media (max-width: 961px) {
+  .posts-container {
+    grid-template-columns: repeat(1, 1fr)
+  }
+}
+
+@media (min-width: 961px) {
+  .posts-container {
+    grid-template-columns: repeat(2, 1fr)
+  }
+}
+
+@media (min-width: 1080px) {
+  .posts-container {
+    grid-template-columns: repeat(3, 1fr)
+  }
+}
