@@ -4,41 +4,18 @@
     <h1>Home Page</h1>
 
     <div class="posts-container">
-        <div class="post-card">
-            <div class="post-img"><img src="/images/bali.jpg" class="card-img-top" alt="bali beach"></div>
-            <div class="post-title">Exploring the Serene Beaches of Bali</div>
-            <div class="post-date">February 28, 2024</div>
-            <div class="post-summary">Bali, known as the Island of the Gods, is a destination that beckons travelers with its stunning beaches, rich culture, and lush landscapes. Join me as I recount my recent adventure exploring the serene beaches of Bali.</div>
-        </div>
-        <div class="post-card">
-            <div class="post-img"><img src="/images/maasai-mara.jpg" class="card-img-top" alt="maasai mara"></div>
-            <div class="post-title">A Safari Adventure in the Maasai Mara</div>
-            <div class="post-date">December 18, 2023</div>
-            <div class="post-summary">Nestled in the heart of Kenya, the Maasai Mara National Reserve is renowned for its breathtaking landscapes and abundant wildlife. Join me as I recount my unforgettable safari adventure in this iconic destination.</div>
-        </div>
-        <div class="post-card">
-            <div class="post-img"><img src="/images/big_sur.JPG" class="card-img-top" alt="big sur"></div>
-            <div class="post-title">Discovering the Charms of Coastal California</div>
-            <div class="post-date">November 10, 2023</div>
-            <div class="post-summary">California, with its diverse landscapes and vibrant culture, offers endless opportunities for exploration and adventure. Join me as I recount my journey along the stunning coast of the Golden State, from the iconic beaches of Southern California to the rugged shores of the North Coast.</div>
-        </div><div class="post-card">
-            <div class="post-img"><img src="/images/bali.jpg" class="card-img-top" alt="bali beach"></div>
-            <div class="post-title">Exploring the Serene Beaches of Bali</div>
-            <div class="post-date">February 28, 2024</div>
-            <div class="post-summary">Bali, known as the Island of the Gods, is a destination that beckons travelers with its stunning beaches, rich culture, and lush landscapes. Join me as I recount my recent adventure exploring the serene beaches of Bali.</div>
-        </div>
-        <div class="post-card">
-            <div class="post-img"><img src="/images/maasai-mara.jpg" class="card-img-top" alt="maasai mara"></div>
-            <div class="post-title">A Safari Adventure in the Maasai Mara</div>
-            <div class="post-date">December 18, 2023</div>
-            <div class="post-summary">Nestled in the heart of Kenya, the Maasai Mara National Reserve is renowned for its breathtaking landscapes and abundant wildlife. Join me as I recount my unforgettable safari adventure in this iconic destination.</div>
-        </div>
-        <div class="post-card">
-            <div class="post-img"><img src="/images/big_sur.JPG" class="card-img-top" alt="big sur"></div>
-            <div class="post-title">Discovering the Charms of Coastal California</div>
-            <div class="post-date">November 10, 2023</div>
-            <div class="post-summary">California, with its diverse landscapes and vibrant culture, offers endless opportunities for exploration and adventure. Join me as I recount my journey along the stunning coast of the Golden State, from the iconic beaches of Southern California to the rugged shores of the North Coast.</div>
-        </div>
+        <% if (locals.postsData) { %>
+            <% postsData.forEach((post)=> { %>
+                <div class="post-card">
+                    <div class="post-img"><img src="<%= post.img %>" class="card-img-top" alt="bali beach"></div>
+                    <div class="post-title"><%= post.title %></div>
+                    <div class="post-date"><%= post.date %></div>
+                    <div class="post-summary"><%= post.summary %></div>
+                </div>
+            <%}) %>
+        <% } else {%>
+            <p>No items to display</p>
+        <% } %>
     </div>
 </div>
 
