@@ -4,9 +4,11 @@
     <h1>Create New Post</h1>
 
     <div class="new-post-container">
-        <form action="/submit" method="POST">
-            <label for="post">Post Content</label><br>
-            <textarea placeholder='Enter the post content...' maxlength='1000' minlength='100' name="post" id="post" cols="100" required></textarea>
+        <form action="/newPost" method="post">
+            <p>Post title</p>
+            <input type="text" name="postTitle"><br>
+            <p>Post content</p>
+            <textarea placeholder='Enter the post content...' maxlength='1000' minlength='100' name="postContent" id="postContent" cols="100" required></textarea>
             <input type="submit" value="Submit">
         </form> 
     </div>
