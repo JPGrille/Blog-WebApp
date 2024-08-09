@@ -35,7 +35,7 @@ p {
   border-radius: 50%;
 }
 form {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .feedback-input {
@@ -52,6 +52,10 @@ form {
   width: 100%;
   box-sizing: border-box;
   outline: 0;
+}
+
+.google-sign-in{
+  margin-top: 20px;
 }
 
 .posts-container {

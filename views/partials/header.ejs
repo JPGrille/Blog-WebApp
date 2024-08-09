@@ -29,13 +29,23 @@
             <li class="nav-item">
               <a class="nav-link" href="/">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/newPost">New Post</a>
-            </li>
+            <% if(locals.isLoggedIn){ %>
+              <li class="nav-item">
+                <a class="nav-link" href="/newPost">New Post</a>
+              </li>
+            <% } %>
             <li class="nav-item">
               <a class="nav-link" href="/about">About</a>
             </li>
-    
+            <% if(locals.isLoggedIn){ %>
+              <li class="nav-item">
+                <a class="btn btn-dark btn-lg" href="/logout" role="button">Log Out</a>
+              </li>
+            <% } else{ %>  
+              <li class="nav-item">
+                <a class="btn btn-dark btn-lg" href="/login" role="button">Sign In</a>
+              </li>
+            <% } %>    
           </ul>
         </div>
       </nav>
